@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// bibliotecas inseridas por mim para funcionamento do
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; //biblioteca para gerenciamento da cena
 
 public class SavePoints : MonoBehaviour
 {
@@ -24,6 +26,11 @@ public class SavePoints : MonoBehaviour
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
+    }
+
+    public void RestartGame(string level)
+    {
+        SceneManager.LoadScene(level);
     } 
 
     
