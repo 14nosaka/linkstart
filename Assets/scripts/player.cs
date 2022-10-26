@@ -86,6 +86,19 @@ public class player : MonoBehaviour
         {
             SavePoints.acesso.ShowGameOver();
             Destroy(gameObject);
+        }if(collision.gameObject.tag == "damage")
+        {
+            healthController.acesso.TakeDamage();
+            
+            if (healthController.acesso.Health == 0){
+                
+                SavePoints.acesso.ShowGameOver();
+                Destroy(gameObject);
+            }
+        }
+        if(collision.gameObject.tag == "heal")
+        {
+            healthController.acesso.Heal();
         }
     }
 
